@@ -1,9 +1,16 @@
-import { Button } from './post';
+import { Button } from './post'; //named export react
 
 function App() {
   return (
     <div>
-      <h1>Hello</h1>
+      <button />
+      <button />
+      <button />
+      <button />
+      <button />
+      <button />
+      <button />
+      <button />
     </div>
   );
 }
