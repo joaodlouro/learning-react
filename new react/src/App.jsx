@@ -1,17 +1,11 @@
-import { Button } from './post'; //named export react
+import { Button, Post } from './post'; //named export react
 
-function App() {
+export function App() {
   return (
     <div>
-      <button />
-      <button />
-      <button />
-      <button />
-      <button />
-      <button />
-      <button />
-      <button />
+      <Post authot="joao" content="aaaaaaa" />
+
+      <Post author="gabriel" content="pum dois  e etc" />
     </div>
   );
 }
-export default App;
