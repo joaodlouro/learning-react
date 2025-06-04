@@ -1,4 +1,4 @@
-import { Circle } from "./circle";
+import { Circle } from "./Circle";
 import { Square } from "./Square";
 
 export const GeoForm = () => {
@@ -8,13 +8,14 @@ export const GeoForm = () => {
         Formas geométricas
       </h3>
 
-      <div className="flex gaP-2 border-2 p-3">
+       <div className="flex gap-2 border-2 p-3">
+
     
       <Square />
       <Circle />
 
       </div>
-      
+
     </div>
   );
 };
