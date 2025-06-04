@@ -1,5 +1,5 @@
 import { Circle } from "./Circle";
-import { Square } from "./Square";
+import { Square } from "./Square";      //componetes dentro de componetes 
 
 export const GeoForm = () => {
   return (
