@@ -8,12 +8,22 @@ import { Person } from "@/components/Person";
 const Page = () => {
   return (
     <div>
-      <h1 className="font-bold  text-lg">Olá mundo</h1>
+      <h1 className="font-bold text-lg">Olá mundo</h1>
       <h2>oiiii</h2>
 
       <GeoForm /> 
   
-      <Person />
+      <Person 
+        name="cat"
+        avatar="https://i.pinimg.com/736x/e2/ae/91/e2ae91720c347f89d2315edd9ba98ea6.jpg"
+        role={['2. 3 .4 .2 234']}
+      />
+
+      <Person 
+        name="dog"
+        avatar="https://cdn.shopify.com/s/files/1/0086/0795/7054/files/Golden-Retriever.jpg?v=1645179525"
+        role={['2. 3 .4 .2 234']}
+      />
     </div>
   );
 }
