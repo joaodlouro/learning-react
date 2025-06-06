@@ -13,13 +13,13 @@ const Page = () => {
     <h1 className="font-bold  text-2xl"> Olá mundo  </h1>
     <h3> Algum outro texto </h3>
 
-    <Card>
+
       <>
       <h3 className="text-3xl font-bold italic"> "efeito"</h3>
       <p className="text-right text-sm">autor</p>
      <Circle/>
       </>
-    </Card>
+     <Card phrase="alguma" author="isso ai"  />
     </div>
   );
 }
