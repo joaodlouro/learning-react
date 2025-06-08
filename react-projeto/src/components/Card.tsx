@@ -1,4 +1,4 @@
-import { Phetsarath } from "next/font/google"; //condicional ternaria 
+import { Phetsarath } from "next/font/google"; //condicional ternaria   // jsx apenas um elemento, fragmentamos quando queremos mais elementos 
 
 type Props = {
   phrase: string;
@@ -15,6 +15,7 @@ export const Card = ({ phrase, author }: Props) => {
 
         <p className="text-right text-sm">-{author}</p>
 }
+{!author && "autor desconhecido"}
       </div>
     );
   }
