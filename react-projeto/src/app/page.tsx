@@ -1,27 +1,22 @@
-//referecia importação, usando igual tag html e possi chamar por outro nome na importação ex> "quadrado ao inves de Square/ não faz diferança para o codigo" =(somente export default). import Square, {Circle} from '@/components/Geo' , dá para importa dos dois jeitos, não necessariamnte somente de um.
+const Page =  () => {
 
-//import {Square, Circle} from '@/components/circle'       
+const people = [
 
-import { GeoForm } from "@/components/GeoForm";
-import { Person } from "@/components/Person";
-import { Card } from "@/components/Card";
-import { Circle } from "@/components/Circle";
+  {id: 1, name: 'Fulano1', profession: ',mathematician1'},
+    {id: 2, name: 'Fulano2', profession: ',mathematician2'},
+      {id: 3, name: 'Fulano3', profession: ',mathematician3'},
+        {id: 4, name: 'Fulano4', profession: ',mathematician4'},
+          {id: 5, name: 'Fulano5', profession: ',mathematician5'},
+  
 
-const Page = () => {
-  return (
-    <div>
-    <h1 className="font-bold  text-2xl"> Olá mundo  </h1>
-    <h3> Algum outro texto </h3>
+];
 
-
-      <>
-      <h3 className="text-3xl font-bold italic"> "efeito"</h3>
-      <p className="text-right text-sm">autor</p>
-     <Circle/>
-      </>
-     <Card phrase="alguma" author="isso ai"  />
-    </div>
-  );
+return (
+  <div>
+    <h1 className="font-bold text-2xl">Olá mundo </h1>
+    <h3>algo texto</h3>
+  </div>
+);
 }
 
 export default Page;
