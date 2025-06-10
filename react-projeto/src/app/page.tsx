@@ -1,25 +1,26 @@
-
 import {peopleList} from '@/data/peopleList';
 
 const Page =  () => {
 
-//const list = peopleList.map(person => <li>{person.name}</li>)  //parametro, list com varios <li>
+  const chemists = peopleList.filter(person => person.profession === 'chemist');  //filtro
 
+  return (
+    <div>
+      <h1 className="font-bold text-2xl">Olá mundo</h1>
+      <h3>algo texto</h3>
 
-return (
-  <div>
-    <h1 className="font-bold text-2xl">Olá mundo </h1>
-    <h3>algo texto</h3>
-
-    {peopleList.length >0 &&
-    <ul>
-       {peopleList.map (person => 
-      <li key= {person.id}>{person.name}- {person.profession}</li> //quando usar map, user  key= {person.id} (sempre o id), identificador unico para x iten
-      )}
-    </ul>
-}
-  </div>
-);
+      {chemists.length > 0 && 
+        <>
+          <h3>Lista de químicos</h3>
+          <ul>
+            {chemists.map(person =>
+              <li key={person.id}>{person.name}</li>
+            )}
+          </ul>
+        </>
+      }
+    </div>
+  );
 }
 
 export default Page;
