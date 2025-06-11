@@ -1,26 +1,19 @@
-import {peopleList} from '@/data/peopleList';
+const Page = () => {
+  const fullTime = new Intl.DateTimeFormat("en", {
+    timeStyle: "short",
+    hour12: false,
+  }).format(new Date());
 
-const Page =  () => {
-
-  const chemists = peopleList.filter(person => person.profession === 'chemist');  //filtro
+  const hour = new Date().getHours(); 
 
   return (
-    <div>
-      <h1 className="font-bold text-2xl">Olá mundo</h1>
-      <h3>algo texto</h3>
-
-      {chemists.length > 0 && 
-        <>
-          <h3>Lista de químicos</h3>
-          <ul>
-            {chemists.map(person =>
-              <li key={person.id}>{person.name}</li>
-            )}
-          </ul>
-        </>
-      }
+    <div className="w-screen h-screen flex flex-col justify-center items-center text-white bg-gradient-to-r from-blue-500 to-green-500">
+      <div className="text-9xl">{fullTime}</div>
+      <div className="text-5xl font-bold">
+        {hour < 12 ? "Good morning!" : hour < 18 ? "Good afternoon!" : "Good evening!"}
+      </div>
     </div>
   );
-}
+};
 
 export default Page;
