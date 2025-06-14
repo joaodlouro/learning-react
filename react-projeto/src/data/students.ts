@@ -1,6 +1,7 @@
-import type { Student } from "@/type/Student";
+import type { Students } from "@/types/Student";
 
-export const students: Student[] = [
+
+export const students: Students[] =  [
   {
     id: 1,
     active: true,

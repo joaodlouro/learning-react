@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const Card = ({ phrase, author }: Props) => {
-  
+   
     return (
       <div className="w-96 border-2 border-red p-3 text-3xl text-center italic">
         <h3 className="text-3xl font-bold italic">"{phrase}"</h3>
@@ -14,6 +14,7 @@ export const Card = ({ phrase, author }: Props) => {
         {author && 
 
         <p className="text-right text-sm">-{author}</p>
+        
 }
 {!author && "autor desconhecido"}
       </div>
