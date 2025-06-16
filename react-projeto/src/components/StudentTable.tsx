@@ -21,7 +21,7 @@ export const StudentTable = ({ students }: Props) => {
         {students.map(item => (
           <tr key={item.id} className="text-gray-800 bg-gray-400 border-b border-gray-600">
             <td className="p-3 flex items-center">
-              <img src={item.avatar} alt={item.name} className="w-30 h-30 rouded-full mr-5"/>
+              <img src={item.avatar} alt={item.name} className="w-30 h-30 rounded-full mr-5"/>
               <div>
                 <div className="font-bold">{item.name}</div>
                 <div>{item.email}</div>
