@@ -28,7 +28,8 @@ export const StudentTable = ({ students }: Props) => {
               </div>
             </td>
             <td>
-              {item.active && <div>Active</div>}
+              {item.active && <div className="px-2 py-1 inline-block rounded-md border-green bg-green-600 text-white text-xs
+">Active</div>}
               {!item.active && <div>Inactive</div>}
             </td>
             <td>{item.grade1}</td>
