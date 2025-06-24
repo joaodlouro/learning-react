@@ -7,7 +7,9 @@
   const [count, setCount] = useState(0);
 
   const handleBtnClick = () => {
-    setCount(count + 2);
+   setCount( c => c + 2);
+    setCount( c => c + 2);
+     setCount(c => c + 2);
   };
 
 
