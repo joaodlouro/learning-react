@@ -10,7 +10,7 @@ const Page = () => {
   });
 
   const handleClearButton = () => {
-    setFullName({ ...fullName, name: "pedrinho123" });
+    setFullName({ ...fullName, name: "" });
   };
 
   return (
@@ -24,6 +24,14 @@ const Page = () => {
           setFullName({ ...fullName, lastName: e.target.value })
         }
       />
+
+      <input
+        type="text"
+        placeholder="Nome"
+        className="border border-black p-3 text-2xl text-black rounded-md mb-3"
+        value={fullName.name}
+        onChange={(e) => setFullName({ ...fullName, name: e.target.value })}
+        />
 
       <p>Nome aqui:</p>
       <p>
