@@ -1,6 +1,5 @@
 export type TodoItem = {
-    
- label: string;
+  id: string;
+  label: string;
   checked: boolean;
-
-}                              
+};

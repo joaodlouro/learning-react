@@ -6,14 +6,22 @@ import { useState } from 'react';
 const Page = () => {
   const [itemInput, setItemInput] = useState('');
   const [list, setList] = useState<TodoItem[]>([
-    { label: 'dever', checked: false },
-    { label: 'comprar', checked: false }
+    { id: '1', label: 'dever', checked: false },
+    { id: '2', label: 'comprar', checked: false }
   ]);
 
   const handleAddButton = () => {
     if (itemInput.trim() === '') return;
-    setList([...list, { label: itemInput, checked: false }]);
+    setList([
+      ...list,
+      { id: crypto.randomUUID(), label: itemInput, checked: false }
+    ]);
     setItemInput('');
+  };
+
+  const deleteItem = (index: number) => {
+    const newList = list.filter((_, i) => i !== index);
+    setList(newList);
   };
 
   return (
@@ -38,10 +46,13 @@ const Page = () => {
 
       <ul className="w-full max-w-lg list-disc pl-5">
         {list.map((item, index) => (
-          <li key={index}>
+          <li key={item.id}>
             {item.label} - 
-            <button className="ml-2 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">
-              [Remover]
+            <button
+              onClick={() => deleteItem(index)}
+              className="ml-2 px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700"
+            >
+              Excluir
             </button>
           </li>
         ))}
