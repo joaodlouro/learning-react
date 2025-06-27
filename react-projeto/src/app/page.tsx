@@ -28,13 +28,7 @@ const Page = () => {
 
   const toggleItem = (index: number) => {
     let newList = [...list];
-
-    for(let i in newList) {
-      if (index === parseInt(i)) {
-        newList[i].checked = !newList[i].checked;
-      }
-    }
-
+        newList[index].checked = !newList[index].checked;
 
  setList(newList);
 
