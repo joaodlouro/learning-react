@@ -1,12 +1,13 @@
 "use client"
 
 import { TodoItem } from '@/types/TodoItem';
+import { Nerko_One } from 'next/font/google';
 import { useState } from 'react';
 
 const Page = () => {
   const [itemInput, setItemInput] = useState('');
   const [list, setList] = useState<TodoItem[]>([
-    { id: '1', label: 'dever', checked: false },
+    { id: '1', label: 'dever', checked: true },
     { id: '2', label: 'comprar', checked: false }
   ]);
 
@@ -23,6 +24,25 @@ const Page = () => {
     const newList = list.filter((_, i) => i !== index);
     setList(newList);
   };
+
+
+  const toggleItem = (index: number) => {
+    let newList = [...list];
+
+    for(let i in newList) {
+      if (index === parseInt(i)) {
+        newList[i].checked = !newList[i].checked;
+      }
+    }
+
+
+ setList(newList);
+
+  }
+
+
+
+
 
   return (
     <div className="w-screen h-screen flex flex-col items-center text-2xl">
@@ -47,6 +67,9 @@ const Page = () => {
       <ul className="w-full max-w-lg list-disc pl-5">
         {list.map((item, index) => (
           <li key={item.id}>
+
+            <input onClick={() => toggleItem(index)} type="checkbox" checked={item.checked} className="w-6 h-3 mr-4" />
+
             {item.label} - 
             <button
               onClick={() => deleteItem(index)}
