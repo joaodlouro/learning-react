@@ -9,7 +9,7 @@ const Page = () => {
       <h1>Fotos interativas</h1>
 
       <section className="container max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-35">
-        {photosList.map((item   => (
+        {photosList.map((item   => (  
           <div> aaaa</div>
         )))}
         </section>
