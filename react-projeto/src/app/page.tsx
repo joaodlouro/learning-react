@@ -20,7 +20,7 @@ const Page = () => {
 
   const closeModal = () => {
     setShowModal(false);
-    setImageModal("");
+    setImageModal("");      
   };
 
   return (

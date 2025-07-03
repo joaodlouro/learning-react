@@ -12,3 +12,5 @@ export const PhotoItem = ({ photo, onClick }: Props) => {
     </div>
   );
 };
+
+
