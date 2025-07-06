@@ -1,32 +1,27 @@
-import {Question} from '../types/Question';
-
+import { Question } from '../types/Question';
 
 type Props = {
+  question: Question;
+  count: number;
+  onAnswer: (answer: number) => void;
+};
 
-question: Question;
-count: number;
-onAnswer: (answer: number) => void;
+export const QuestionItem = ({ question, count, onAnswer }: Props) => {
+  
+  return (
+    <div>
+      <div className="">{count}. {question.question}</div>
 
-
-
-}
-
-
-export const QuestionItem = ({question,count,onAnswer}: Props) => {
-
-
-
-  return(
-  <div>
-    <div className="">
-
+      <div>
+        {question.options.map((item, key) => (
+          <div
+            key={key}
+            className=""
+            onClick={() => onAnswer(key)}
+          >
+            {item}</div>
+          ))}
+      </div>
     </div>
-
-  </div>
-
-  )
-
-
-
-
-}
+  );
+};

@@ -1,24 +1,9 @@
-
 import { Question } from '../types/Question';
 
-
-export const questions = [
-
+export const questions: Question[] = [
   {
-    questions: "Qual o igrediente?",
-    options: ["Queijo",
-       "Presunto",
-        "Ovo",
-         "pão"
-        ],
-
-        anwer: 1 
-
-
+    question: "Qual o ingrediente?",
+    options: ["Queijo", "Presunto", "Ovo", "Pão"],
+    answer: 1
   }
-
-
-
-
-
-]
+];
